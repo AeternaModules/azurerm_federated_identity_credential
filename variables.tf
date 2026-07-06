@@ -5,18 +5,21 @@ Required:
     - audience
     - issuer
     - name
+    - subject
+Optional:
     - parent_id
     - resource_group_name
-    - subject
+    - user_assigned_identity_id
 EOT
 
   type = map(object({
-    audience            = list(string)
-    issuer              = string
-    name                = string
-    parent_id           = string
-    resource_group_name = string
-    subject             = string
+    audience                  = list(string)
+    issuer                    = string
+    name                      = string
+    subject                   = string
+    parent_id                 = optional(string)
+    resource_group_name       = optional(string)
+    user_assigned_identity_id = optional(string)
   }))
 }
 
