@@ -1,3 +1,7 @@
+output "federated_identity_credentials_id" {
+  description = "Map of id values across all federated_identity_credentials, keyed the same as var.federated_identity_credentials"
+  value       = { for k, v in azurerm_federated_identity_credential.federated_identity_credentials : k => v.id }
+}
 output "federated_identity_credentials_audience" {
   description = "Map of audience values across all federated_identity_credentials, keyed the same as var.federated_identity_credentials"
   value       = { for k, v in azurerm_federated_identity_credential.federated_identity_credentials : k => v.audience }
