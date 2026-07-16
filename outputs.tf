@@ -1,33 +1,33 @@
 output "federated_identity_credentials_id" {
   description = "Map of id values across all federated_identity_credentials, keyed the same as var.federated_identity_credentials"
-  value       = { for k, v in azurerm_federated_identity_credential.federated_identity_credentials : k => v.id }
+  value       = { for k, v in azurerm_federated_identity_credential.federated_identity_credentials : k => v.id if v.id != null && length(v.id) > 0 }
 }
 output "federated_identity_credentials_audience" {
   description = "Map of audience values across all federated_identity_credentials, keyed the same as var.federated_identity_credentials"
-  value       = { for k, v in azurerm_federated_identity_credential.federated_identity_credentials : k => v.audience }
+  value       = { for k, v in azurerm_federated_identity_credential.federated_identity_credentials : k => v.audience if v.audience != null && length(v.audience) > 0 }
 }
 output "federated_identity_credentials_issuer" {
   description = "Map of issuer values across all federated_identity_credentials, keyed the same as var.federated_identity_credentials"
-  value       = { for k, v in azurerm_federated_identity_credential.federated_identity_credentials : k => v.issuer }
+  value       = { for k, v in azurerm_federated_identity_credential.federated_identity_credentials : k => v.issuer if v.issuer != null && length(v.issuer) > 0 }
 }
 output "federated_identity_credentials_name" {
   description = "Map of name values across all federated_identity_credentials, keyed the same as var.federated_identity_credentials"
-  value       = { for k, v in azurerm_federated_identity_credential.federated_identity_credentials : k => v.name }
+  value       = { for k, v in azurerm_federated_identity_credential.federated_identity_credentials : k => v.name if v.name != null && length(v.name) > 0 }
 }
 output "federated_identity_credentials_parent_id" {
   description = "Map of parent_id values across all federated_identity_credentials, keyed the same as var.federated_identity_credentials"
-  value       = { for k, v in azurerm_federated_identity_credential.federated_identity_credentials : k => v.parent_id }
+  value       = { for k, v in azurerm_federated_identity_credential.federated_identity_credentials : k => v.parent_id if v.parent_id != null && length(v.parent_id) > 0 }
 }
 output "federated_identity_credentials_resource_group_name" {
   description = "Map of resource_group_name values across all federated_identity_credentials, keyed the same as var.federated_identity_credentials"
-  value       = { for k, v in azurerm_federated_identity_credential.federated_identity_credentials : k => v.resource_group_name }
+  value       = { for k, v in azurerm_federated_identity_credential.federated_identity_credentials : k => v.resource_group_name if v.resource_group_name != null && length(v.resource_group_name) > 0 }
 }
 output "federated_identity_credentials_subject" {
   description = "Map of subject values across all federated_identity_credentials, keyed the same as var.federated_identity_credentials"
-  value       = { for k, v in azurerm_federated_identity_credential.federated_identity_credentials : k => v.subject }
+  value       = { for k, v in azurerm_federated_identity_credential.federated_identity_credentials : k => v.subject if v.subject != null && length(v.subject) > 0 }
 }
 output "federated_identity_credentials_user_assigned_identity_id" {
   description = "Map of user_assigned_identity_id values across all federated_identity_credentials, keyed the same as var.federated_identity_credentials"
-  value       = { for k, v in azurerm_federated_identity_credential.federated_identity_credentials : k => v.user_assigned_identity_id }
+  value       = { for k, v in azurerm_federated_identity_credential.federated_identity_credentials : k => v.user_assigned_identity_id if v.user_assigned_identity_id != null && length(v.user_assigned_identity_id) > 0 }
 }
 
