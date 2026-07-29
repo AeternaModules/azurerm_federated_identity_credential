@@ -6,9 +6,6 @@ Required:
     - issuer
     - name
     - subject
-Optional:
-    - parent_id
-    - resource_group_name
     - user_assigned_identity_id
 EOT
 
@@ -17,9 +14,7 @@ EOT
     issuer                    = string
     name                      = string
     subject                   = string
-    parent_id                 = optional(string)
-    resource_group_name       = optional(string)
-    user_assigned_identity_id = optional(string)
+    user_assigned_identity_id = string
   }))
 }
 
